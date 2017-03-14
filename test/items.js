@@ -1,7 +1,10 @@
+testContext.knownAdmin = "jacques";
+testContext.knownAdminPassword = "1234"; 
+
 describe('/items', function() {
     var endpoint = this.title;
     var rootUrl = testContext.getRoot() + endpoint;
-
+    
     var credentials = { };
 
     var hex = crypto.randomBytes(4).toString('hex').toUpperCase();
@@ -43,17 +46,17 @@ describe('/items', function() {
         });
     });
 
-    describe('Verify admin account', function() {
-        it('credentials should be present', function(done) {
-            credentials.should.have.property('session');
-            credentials.should.have.property('token');
-            credentials.should.have.property('id');
-            credentials.should.have.property('isAdmin');
-            credentials.isAdmin.should.equal(true);
-
-            done();
-        });
-    });
+    //describe('Verify admin account', function() {
+    //    it('credentials should be present', function(done) {
+    //        credentials.should.have.property('session');
+    //        credentials.should.have.property('token');
+    //        credentials.should.have.property('id');
+    //        credentials.should.have.property('isAdmin');
+    //        credentials.isAdmin.should.equal(true);
+//
+    //        done();
+    //    });
+    //});
 
     describe('/create', function() {
         var method = this.title;

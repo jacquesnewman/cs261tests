@@ -30,6 +30,7 @@ if (testsToRun.indexOf('ssl') >= 0)
 url += '://';
 url += student.replace(".", "-");
 url += '.cs261.net/api/v1';
+url = "localhost:7000/api/v1";
 process.env.TEST_ROOT_URL = url;
 process.env.TEST_ENDPOINTS = testsToRun;
 
